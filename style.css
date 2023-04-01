@@ -1,0 +1,66 @@
+:root {
+    --color: rgba(0, 50, 50, .8);
+    --button-color: rgba(128, 47, 0, .5)
+}
+
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 5px;
+}
+
+
+header {
+    background-color: rgba(128, 47, 0, .5);
+    color: var(--color);
+    width: 300px;
+    margin: auto;
+}
+
+div {
+    margin-top: 2em;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#to-do {
+    margin: auto;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+#tarefas {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    box-shadow: 1px 1px 3px var(--color);
+    margin: 5px;
+}
+
+button:active {
+    box-shadow: none;
+}
+
+#botao {
+    box-shadow: 1px 1px 3px var(--color);
+}
+
+#botao:hover {
+    background-color: lightgrey;
+
+}
+
+#botao:active {
+    background-color: var(--button-color);
+    box-shadow: none;
+}
