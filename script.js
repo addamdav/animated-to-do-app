@@ -25,9 +25,13 @@ function addTask() {
 function removeTask(event) {
   let newElement = document.getElementById(event.target.id);
   newElement.parentNode.removeChild(newElement);
+  if (tasks.children.length == 0) {
+     tasks.classList.add("hidden")
+     showTasks.innerHTML = "show tasks"
+  }
 }
 
-//All the event listeners
+//events listeners
 
 toDo.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -39,6 +43,26 @@ toDo.addEventListener("submit", (e) => {
   text.value = "";
 });
 
-showTasks.addEventListener(("click"), () => {
-  tasks.classList.remove("hidden");
+showTasks.addEventListener("click", () => {
+  if (tasks.children.length == 0) {
+    alert("Enter a task!");
+    return;
+  } else if (tasks.classList.contains("hidden")) {
+    tasks.classList.remove("hidden");
+    showTasks.innerHTML = "hide tasks";
+    console.log(showTasks.innerHTML);
+    return;
+  } else {
+    showTasks.innerHTML === "hide tasks";
+    tasks.classList.add("hidden");
+    showTasks.innerHTML = "show tasks";
+  }
+
 });
+
+
+
+
+
+
+
